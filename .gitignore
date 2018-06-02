@@ -1,0 +1,8 @@
+deps/_includes
+deps/_libs
+deps/http-parser
+deps/libuv
+deps/map
+*.[oa]
+bin
+.vscode
