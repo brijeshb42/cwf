@@ -19,7 +19,7 @@ DEBUG=-g -ggdb
 FINAL_DEPS+= -I$(PREFIX)/deps/_includes
 
 BIN_NAME=hello-main
-BIN_OBJ=main.o
+BIN_OBJ=main.o request.o server.o
 
 default: all
 
