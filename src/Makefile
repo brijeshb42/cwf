@@ -1,9 +1,10 @@
 CC=clang
 OPTIMIZATION?=-O2
 NODEPS:=clean
-DEPENDENCY_TARGETS=http-parser libuv map
+DEPENDENCY_TARGETS=map http-parser libuv
 
-STD=-std=c99 -pedantic
+# STD=-std=c99 -pedantic
+STD=-pedantic
 WARN=-Wall -W -Wno-missing-field-initializers
 OPT=$(OPTIMIZATION)
 
@@ -11,10 +12,9 @@ PREFIX?=..
 INSTALL_BIN=$(PREFIX)/bin
 INSTALL=install
 
-FINAL_CFLAGS=$(STD) $(WARN) $(OPT) $(DEBUG) $(CFLAGS)
-FINAL_LDFLAGS=$(LDFLAGS) $(DEBUG)
-FINAL_LIBS=-lm -ldl
 DEBUG=-g -ggdb
+FINAL_CFLAGS=$(STD) $(WARN) $(OPT) $(DEBUG) $(CFLAGS)
+FINAL_LIBS=-lm -ldl
 
 FINAL_DEPS+= -I$(PREFIX)/deps/_includes
 
